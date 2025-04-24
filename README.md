@@ -58,7 +58,7 @@ python demo.py
 ```
 
 ## Disclaimer
-This model is different from the model used in the paper as it is trained using different data.
+Our released HuggingFace model differs from the paper’s version due to training on a different dataset.
 
 ## License
 ```
