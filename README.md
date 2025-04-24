@@ -31,6 +31,17 @@
     </tr>
   </table>
 
+## ID-Patch: Build Identity-to-Position Association
+To address ID leakage and the linear increase in generation time with the number of identities, we propose **_ID-Patch_**, a novel method for robust identity-to-position association. From the same facial features, we generate both an **_ID patch_**—placed on the conditional image for precise spatial control—and **_ID embeddings_**, which are fused with text embeddings to enhance identity resemblance.
+
+<table align="center">
+    <tr>
+    <td>
+      <img src="data/pipeline.png">
+    </td>
+    </tr>
+  </table>
+
 ## Environment Setup
 Note: Python 3.9 and CUDA 12.2 are required.
 ```shell
