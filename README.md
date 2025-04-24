@@ -56,6 +56,15 @@ Download models from https://huggingface.co/ByteDance/ID-Patch, and put them und
 ```shell
 python demo.py
 ```
+| Argument | Description |
+|----------|-------------|
+| `--pose_image_path` | Path to the pose image used for conditioning the generation. Default: `data/poses/example_pose.png` |
+| `--subject_dir` | Directory containing subject identity images. Each image should represent one person. Default: `data/subjects` |
+| `--subjects` | Comma-separated list of subject image filenames (e.g., `exp_man.jpg,exp_woman.jpg`). The order corresponds to their placement from **left to right** in the generated image. |
+| `--prompt` | Text prompt describing the scene to be generated. This guides the overall content and style of the output image. |
+| `--base_model_path` | Path to the base diffusion model to be used for generation. Default: `RunDiffusion/Juggernaut-X-v10` |
+| `--output_dir` | Directory where the generated images will be saved. Default: `results` |
+| `--output_name` | Filename prefix for the generated image(s). Default: `exp_result` |
 
 ## Disclaimer
 Our released HuggingFace model differs from the paper’s version due to training on a different dataset.
