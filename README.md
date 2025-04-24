@@ -1,6 +1,6 @@
 <!-- # magic-edit.github.io -->
 <p align="center">
-  <h2 align="center">ID-Patch: Robust ID Association for Group Photo Personalization</h2>
+  <h2 align="center"> [CVPR 2025] ID-Patch: Robust ID Association for Group Photo Personalization</h2>
   <p align="center">
                 <a href="https://damon-demon.github.io">Yimeng Zhang</a><sup>1,2,*</sup>,
                 <a href="https://tiancheng-zhi.github.io">Tiancheng Zhi</a><sup>1</sup>,
@@ -16,8 +16,10 @@
     <small>&nbsp;  <sup>*</sup>Work done during internship at ByteDance. </small>
     <br>
     <br>
-        <a href="https://arxiv.org/abs/2411.13632"><img src='https://img.shields.io/badge/arXiv-ID--Patch-red' alt='Paper PDF'></a>
-        <a href='https://byteaigc.github.io/ID-Patch/'><img src='https://img.shields.io/badge/Project_Page-ID--Patch-green' alt='Project Page'></a>
+        <a href="https://byteaigc.github.io/ID-Patch/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=blue&logo=github-pages"></a> &ensp;
+        <a href="https://arxiv.org/abs/2411.13632"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Paper&color=darkred&logo=arxiv"></a> &ensp;
+        <a href="https://huggingface.co/ByteDance/ID-Patch"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%96%20Released&message=Models&color=green"></a> &ensp;
+        <a href="https://huggingface.co/ByteDance/ID-Patch"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Demo&color=orange"></a> &ensp;
     <br>
   </p>
   
@@ -29,9 +31,11 @@
     </tr>
   </table>
 
-## Installation
+## Environment Setup
 Note: Python 3.9 and CUDA 12.2 are required.
 ```shell
+conda create -n idp python=3.9
+conda activate idp
 pip install -r requirements.txt
 ```
 
