@@ -51,6 +51,10 @@ pip install -r requirements.txt
 ```
 
 Download models from https://huggingface.co/ByteDance/ID-Patch, and put them under `models/` folder.
+```shell
+git lfs install
+git clone https://huggingface.co/ByteDance/ID-Patch
+```
 
 ## Demo
 ```shell
