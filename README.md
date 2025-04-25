@@ -1,6 +1,6 @@
 <!-- # magic-edit.github.io -->
 <p align="center">
-  <h2 align="center">ID-Patch: Robust ID Association for Group Photo Personalization</h2>
+  <h2 align="center"> [CVPR 2025] ID-Patch: Robust ID Association for Group Photo Personalization</h2>
   <p align="center">
                 <a href="https://damon-demon.github.io">Yimeng Zhang</a><sup>1,2,*</sup>,
                 <a href="https://tiancheng-zhi.github.io">Tiancheng Zhi</a><sup>1</sup>,
@@ -16,8 +16,10 @@
     <small>&nbsp;  <sup>*</sup>Work done during internship at ByteDance. </small>
     <br>
     <br>
-        <a href="https://arxiv.org/abs/2411.13632"><img src='https://img.shields.io/badge/arXiv-ID--Patch-red' alt='Paper PDF'></a>
-        <a href='https://byteaigc.github.io/ID-Patch/'><img src='https://img.shields.io/badge/Project_Page-ID--Patch-green' alt='Project Page'></a>
+        <a href="https://byteaigc.github.io/ID-Patch/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=blue&logo=github-pages"></a> &ensp;
+        <a href="https://arxiv.org/abs/2411.13632"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Paper&color=darkred&logo=arxiv"></a> &ensp;
+        <a href="https://huggingface.co/ByteDance/ID-Patch"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%96%20Released&message=Models&color=green"></a> &ensp;
+        <a href="https://huggingface.co/ByteDance/ID-Patch"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Demo&color=orange"></a> &ensp;
     <br>
   </p>
   
@@ -29,21 +31,47 @@
     </tr>
   </table>
 
-## Installation
+## ID-Patch: Build Identity-to-Position Association
+To address ID leakage and the linear increase in generation time with the number of identities, we propose **_ID-Patch_**, a novel method for robust identity-to-position association. From the same facial features, we generate both an **_ID patch_**—placed on the conditional image for precise spatial control—and **_ID embeddings_**, which are fused with text embeddings to enhance identity resemblance.
+
+<table align="center">
+    <tr>
+    <td>
+      <img src="data/pipeline.png">
+    </td>
+    </tr>
+  </table>
+
+## Environment Setup
 Note: Python 3.9 and CUDA 12.2 are required.
 ```shell
+conda create -n idp python=3.9
+conda activate idp
 pip install -r requirements.txt
 ```
 
 Download models from https://huggingface.co/ByteDance/ID-Patch, and put them under `models/` folder.
+```shell
+git lfs install
+git clone https://huggingface.co/ByteDance/ID-Patch
+```
 
 ## Demo
 ```shell
 python demo.py
 ```
+| Argument | Description |
+|----------|-------------|
+| `--pose_image_path` | Path to the pose image used for conditioning the generation. Default: `data/poses/example_pose.png` |
+| `--subject_dir` | Directory containing subject identity images. Each image should represent one person. Default: `data/subjects` |
+| `--subjects` | Comma-separated list of subject image filenames (e.g., `exp_man.jpg,exp_woman.jpg`). The order corresponds to their placement from **left to right** in the generated image. |
+| `--prompt` | Text prompt describing the scene to be generated. This guides the overall content and style of the output image. |
+| `--base_model_path` | Path to the base diffusion model to be used for generation. Default: `RunDiffusion/Juggernaut-X-v10` |
+| `--output_dir` | Directory where the generated images will be saved. Default: `results` |
+| `--output_name` | Filename prefix for the generated image(s). Default: `exp_result` |
 
 ## Disclaimer
-This model is different from the model used in the paper as it is trained using different data.
+Our released HuggingFace model differs from the paper’s version due to training on a different dataset.
 
 ## License
 ```
