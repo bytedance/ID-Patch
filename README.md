@@ -19,7 +19,7 @@
         <a href="https://byteaigc.github.io/ID-Patch/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=blue&logo=github-pages"></a> &ensp;
         <a href="https://arxiv.org/abs/2411.13632"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Paper&color=darkred&logo=arxiv"></a> &ensp;
         <a href="https://huggingface.co/ByteDance/ID-Patch"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%96%20Released&message=Models&color=green"></a> &ensp;
-        <a href="https://huggingface.co/ByteDance/ID-Patch"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Demo&color=orange"></a> &ensp;
+        <a href="https://huggingface.co/spaces/ByteDance/ID-Patch-SDXL"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Demo&color=orange"></a> &ensp;
     <br>
   </p>
   
@@ -93,10 +93,11 @@ limitations under the License.
 ## Citation
 If you find this code useful for your research, please cite us via the BibTeX below.
 ```BibTeX
-@article{zhang2024idpatch,
-        title={ID-Patch: Robust ID Association for Group Photo Personalization},
-        author={Zhang, Yimeng and Zhi, Tiancheng and Liu, Jing and Sang, Shen and Jiang, Liming and Yan, Qing and Liu, Sijia and Luo, Linjie},
-        journal={arXiv preprint arXiv:2411.13632},
-        year={2024}
+@InProceedings{zhang2025idpatch,
+    author    = {Zhang, Yimeng and Zhi, Tiancheng and Liu, Jing and Sang, Shen and Jiang, Liming and Yan, Qing and Liu, Sijia and Luo, Linjie},
+    title     = {ID-Patch: Robust ID Association for Group Photo Personalization},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2025}
 }
 ```
